@@ -1,7 +1,4 @@
-text = list(input())
-stack = []
+list = [1, 2, 3, 4]
 
-for i in range(len(text)):
-    stack.append(text.pop())
-
-print("".join(stack))
+new_list = [print(element) for element in list]
+print(new_list)
