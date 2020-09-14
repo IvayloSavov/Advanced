@@ -1,5 +1,5 @@
 from _collections import deque
-deque.append()
+
 people = deque()
 
 while True:

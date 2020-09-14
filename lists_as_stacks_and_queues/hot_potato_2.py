@@ -4,7 +4,8 @@ people = deque(input().split(" "))
 n_toss = int(input())
 
 while len(people) > 1:
-    people.rotate(-n_toss)
+    for _ in range(n_toss):
+        people.append(people.popleft())
     loser = people.pop()
     print(f"Removed {loser}")
 
