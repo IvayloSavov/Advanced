@@ -1,9 +1,5 @@
 def input_to_list(count_students):
-    students = []
-
-    for _ in range(count_students):
-        student = input()
-        students.append(student)
+    students = [input() for _ in range(count_students)]
 
     return students
 
