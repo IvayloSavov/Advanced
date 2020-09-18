@@ -2,9 +2,8 @@ def periodic_table(count_lines):
     elements = set()
 
     for _ in range(count_lines):
-        elements_input = tuple(input().split(" "))
-        for element in elements_input:
-            elements.add(element)
+        elements_input = set(input().split(" "))
+        elements.union(elements_input)
 
     return "\n".join(sorted(elements))
 
