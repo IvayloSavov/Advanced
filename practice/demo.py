@@ -1,23 +1,74 @@
 from collections import deque
 
-all_customers = deque(map(int, input().split(", ")))
-all_taxis = deque(int(t) for t in input().split(", "))
+main_colors = ["red", "yellow", "blue"]
+secondary_colors = ["orange", "purple", "green"]
 
-total_time = 0
+colors_we_have = []
+string_input = deque(input().split(" "))
 
-while all_customers and all_taxis:
-    customer = all_customers.popleft()
-    taxi = all_taxis.pop()
+while string_input:
+    f_element = string_input.popleft()
+    s_element = ""
+    concatenate = ""
+    concatenate_2 = ""
+    if string_input:
+        s_element = string_input.pop()
 
-    if taxi >= customer:
-        total_time += customer
+    if f_element and s_element:
+        concatenate = f_element + s_element
+        concatenate_2 = s_element + f_element
     else:
-        all_customers.appendleft(customer)
+        concatenate = f_element
 
-if not all_customers:
-    print("All customers were driven to their destinations")
-    print(f"Total time: {total_time} minutes")
+    if concatenate in main_colors:
+        colors_we_have.append(concatenate)
 
-elif not all_taxis and all_customers:
-    print("Not all customers were driven to their destinations")
-    print(f"Customers left: {', '.join([str(c) for c in all_customers])}")
+    elif concatenate_2 in main_colors:
+        colors_we_have.append(concatenate_2)
+
+    elif concatenate in secondary_colors:
+        colors_we_have.append(concatenate)
+
+    elif concatenate_2 in secondary_colors:
+        colors_we_have.append(concatenate_2)
+
+    else:
+        f_element = deque(f_element)
+        f_element.pop()
+        if s_element:
+            s_element = deque(s_element)
+            s_element.pop()
+
+        if f_element and s_element:
+            f_element = "".join(f_element)
+            s_element = "".join(s_element)
+            string_input.insert((len(string_input) // 2), f_element)
+            string_input.insert((len(string_input) // 2 + 1), s_element)
+
+        elif f_element:
+            f_element = "".join(f_element)
+            string_input.insert((len(string_input) // 2), f_element)
+
+        elif s_element:
+            s_element = "".join(s_element)
+            string_input.insert((len(string_input) // 2), s_element)
+
+if "orange" in colors_we_have:
+    if "red" in colors_we_have and "yellow" in colors_we_have:
+        pass
+    else:
+        colors_we_have.remove("orange")
+
+if "purple" in colors_we_have:
+    if "red" in colors_we_have and "blue" in colors_we_have:
+        pass
+    else:
+        colors_we_have.remove("purple")
+
+if "green" in colors_we_have:
+    if "yellow" in colors_we_have and "blue" in colors_we_have:
+        pass
+    else:
+        colors_we_have.remove("green")
+
+print(colors_we_have)
