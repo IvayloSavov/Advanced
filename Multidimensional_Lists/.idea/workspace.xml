@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d242bd5-0da7-41da-8044-b774e4075041" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/below_primary_diagonal.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/below_secondary.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/primary_diagonal.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/second_diagonal.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/square_sum_matrix.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sum_matrix_columns.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sum_matrix_elemets.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symbol_in_martix.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symbol_in_matrix_Str.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../practice/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practice/demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../practice/demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/square_sum_matrix.py" beforeDir="false" afterPath="$PROJECT_DIR$/square_sum_matrix.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +38,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.symbol_in_martix">
+  <component name="RunManager" selected="Python.shallow_deep_copies">
     <configuration name="second_diagonal" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Multidimensional_Lists" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -70,6 +60,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="shallow_deep_copies" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Multidimensional_Lists" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../python-advanced-2020-05/multidimensional_lists" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../python-advanced-2020-05/multidimensional_lists/shallow_deep_copies.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="sum_matrix_columns" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Multidimensional_Lists" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -83,27 +94,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sum_matrix_columns.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sum_matrix_elemets" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Multidimensional_Lists" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sum_matrix_elemets.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -156,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.shallow_deep_copies" />
         <item itemvalue="Python.symbol_in_martix" />
         <item itemvalue="Python.symbol_in_matrix_Str" />
         <item itemvalue="Python.second_diagonal" />
         <item itemvalue="Python.sum_matrix_columns" />
-        <item itemvalue="Python.sum_matrix_elemets" />
       </list>
     </recent_temporary>
   </component>
@@ -182,22 +172,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1600792654150" />
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1600885127957">
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1600887416725">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600885127957" />
-    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1600885127957">
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600887416725" />
+    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1600887416725">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1600885127957" />
-    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1600885127957">
+    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1600887416725" />
+    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1600887416724">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1600885127957" />
-    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1600885127957">
+    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1600887416724" />
+    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1600887416725">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1600885127957" />
+    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1600887416725" />
     <state width="1259" height="204" key="GridCell.Tab.1.bottom" timestamp="1600885124723">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
