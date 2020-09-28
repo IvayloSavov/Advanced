@@ -2,30 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d242bd5-0da7-41da-8044-b774e4075041" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/primary_diagonal_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/square_sum_matrix_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/square_sum_matrix_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/square_sum_matrix_best.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sum_matrix_elements.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symbol_in_martix_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Multidimensional_Lists_Exercise/2x2_Squares_in_Matrix.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Multidimensional_Lists_Exercise/2x2_Squares_in_Matrix_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Multidimensional_Lists_Exercise/Matrix Shuffling.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Multidimensional_Lists_Exercise/Matrix_Shuffling_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Multidimensional_Lists_Exercise/demo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Multidimensional_Lists_Exercise/diagonal_difference.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Multidimensional_Lists_Exercise/diagonal_difference_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Multidimensional_Lists_Exercise/knight_game.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Multidimensional_Lists_Exercise/max_sum.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Multidimensional_Lists_Exercise/maximum_sum.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Multidimensional_Lists_Exercise/maximum_sum_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Multidimensional_Lists_Exercise/snake_moves.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Multidimensional_Lists_Exercise/snake_moves_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Multidimensional_Lists_Exercise/Radioactive_Mutate_Vampire_Bunnies_jambazov.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Comprehensions/ASCII_Values.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Comprehensions/ASCII_Values.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Comprehensions/Even_Matrix.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Comprehensions/Even_Matrix.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Comprehensions/Filter_Numbers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Comprehensions/Filter_Numbers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Comprehensions/Flattening_Matrix.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Comprehensions/Flattening_Matrix.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Comprehensions/No_Vowels.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Comprehensions/No_Vowels.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practice/demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../practice/demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practice/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../practice/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
