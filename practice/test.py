@@ -1,1 +1,2 @@
-print(5//2 + 1)
+from math import floor
+

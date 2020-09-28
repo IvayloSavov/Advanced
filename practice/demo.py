@@ -1,74 +1,66 @@
 from collections import deque
 
-main_colors = ["red", "yellow", "blue"]
-secondary_colors = ["orange", "purple", "green"]
+presents = {
+    "Doll": {"magic needed": 150, "count": 0},
+    "Wooden train": {"magic needed": 250, "count": 0},
+    "Teddy bear": {"magic needed": 300, "count": 0},
+    "Bicycle": {"magic needed": 400, "count": 0},
+}
 
-colors_we_have = []
-string_input = deque(input().split(" "))
+materials = deque(map(int, input().split()))
+magic_levels = deque(map(int, input().split()))
 
-while string_input:
-    f_element = string_input.popleft()
-    s_element = ""
-    concatenate = ""
-    concatenate_2 = ""
-    if string_input:
-        s_element = string_input.pop()
+while materials and magic_levels:
+    current_material = materials.pop()
+    current_magic = magic_levels.popleft()
 
-    if f_element and s_element:
-        concatenate = f_element + s_element
-        concatenate_2 = s_element + f_element
-    else:
-        concatenate = f_element
+    if current_material == 0 and current_magic > 0:
+        magic_levels.appendleft(current_magic)
+        continue
 
-    if concatenate in main_colors:
-        colors_we_have.append(concatenate)
+    if current_magic == 0 and current_material > 0:
+        materials.append(current_material)
+        continue
 
-    elif concatenate_2 in main_colors:
-        colors_we_have.append(concatenate_2)
+    if current_material == 0 and current_magic == 0:
+        continue
 
-    elif concatenate in secondary_colors:
-        colors_we_have.append(concatenate)
+    total_magic = current_magic * current_material
+    if total_magic < 0:
+        new_material = current_magic + current_material
+        materials.append(new_material)
+        continue
 
-    elif concatenate_2 in secondary_colors:
-        colors_we_have.append(concatenate_2)
+    found_present = False
 
-    else:
-        f_element = deque(f_element)
-        f_element.pop()
-        if s_element:
-            s_element = deque(s_element)
-            s_element.pop()
+    for present, info in presents.items():
+        if info["magic needed"] == total_magic:
+            found_present = True
+            presents[present]["count"] += 1
 
-        if f_element and s_element:
-            f_element = "".join(f_element)
-            s_element = "".join(s_element)
-            string_input.insert((len(string_input) // 2), f_element)
-            string_input.insert((len(string_input) // 2 + 1), s_element)
+    if not found_present:
+        current_material += 15
+        materials.append(current_material)
 
-        elif f_element:
-            f_element = "".join(f_element)
-            string_input.insert((len(string_input) // 2), f_element)
+is_done = False
 
-        elif s_element:
-            s_element = "".join(s_element)
-            string_input.insert((len(string_input) // 2), s_element)
+if (presents["Doll"]["count"] >= 1 and presents["Wooden train"]["count"] >= 1) \
+        or (presents["Teddy bear"]["count"] >= 1 and presents["Bicycle"]["count"] >= 1):
+    is_done = True
 
-if "orange" in colors_we_have:
-    if "red" in colors_we_have and "yellow" in colors_we_have:
-        pass
-    else:
-        colors_we_have.remove("orange")
+if is_done:
+    print("The presents are crafted! Merry Christmas!")
+else:
+    print(f"No presents this Christmas!")
 
-if "purple" in colors_we_have:
-    if "red" in colors_we_have and "blue" in colors_we_have:
-        pass
-    else:
-        colors_we_have.remove("purple")
+if materials:
+    materials.reverse()
+    print(f"Materials left: {', '.join(list(map(str, materials)))}")
 
-if "green" in colors_we_have:
-    if "yellow" in colors_we_have and "blue" in colors_we_have:
-        pass
-    else:
-        colors_we_have.remove("green")
+if magic_levels:
+    print(f"Magic left: {', '.join(list(map(str, magic_levels)))}")
 
-print(colors_we_have)
+filtered_presents = [p for p in sorted(presents) if presents[p]["count"] >= 1]
+
+for present in filtered_presents:
+    print(f"{present}: {presents[present]['count']}")
