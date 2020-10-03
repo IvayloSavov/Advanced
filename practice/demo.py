@@ -1,66 +1,74 @@
+from sys import maxsize
 from collections import deque
 
-presents = {
-    "Doll": {"magic needed": 150, "count": 0},
-    "Wooden train": {"magic needed": 250, "count": 0},
-    "Teddy bear": {"magic needed": 300, "count": 0},
-    "Bicycle": {"magic needed": 400, "count": 0},
-}
 
-materials = deque(map(int, input().split()))
-magic_levels = deque(map(int, input().split()))
+def find_bunny(matrix):
+    for m in range(len(matrix)):
+        for j in range(len(matrix)):
+            if matrix[m][j] == "B":
+                return m, j
 
-while materials and magic_levels:
-    current_material = materials.pop()
-    current_magic = magic_levels.popleft()
 
-    if current_material == 0 and current_magic > 0:
-        magic_levels.appendleft(current_magic)
-        continue
+def counting_eggs(matrix, direction):
+    current_sum_eggs = 0
+    current_eggs_position = []
+    row_bunny, col_bunny = find_bunny(matrix)
+    global max_eggs
+    global max_eggs_positions
+    global max_direction
 
-    if current_magic == 0 and current_material > 0:
-        materials.append(current_material)
-        continue
+    if direction == "up":
+        for i in range(row_bunny - 1, -1, -1):
+            if not 0 <= i < len(matrix) or matrix[i][col_bunny] == "X":
+                break
+            current_sum_eggs += int(matrix[i][col_bunny])
+            current_eggs_position.append([i, col_bunny])
 
-    if current_material == 0 and current_magic == 0:
-        continue
+    elif direction == "down":
+        for i in range(row_bunny + 1, len(matrix)):
+            if not 0 <= i < len(matrix) or matrix[i][col_bunny] == "X":
+                break
+            current_sum_eggs += int(matrix[i][col_bunny])
+            current_eggs_position.append([i, col_bunny])
 
-    total_magic = current_magic * current_material
-    if total_magic < 0:
-        new_material = current_magic + current_material
-        materials.append(new_material)
-        continue
+    elif direction == "left":
+        for i in range(col_bunny - 1, -1, -1):
+            if not 0 <= i < len(matrix) or matrix[row_bunny][i] == "X":
+                break
+            current_sum_eggs += int(matrix[row_bunny][i])
+            current_eggs_position.append([row_bunny, i])
 
-    found_present = False
+    elif direction == "right":
+        for i in range(col_bunny + 1, len(matrix)):
+            if not 0 <= i < len(matrix) or matrix[row_bunny][i] == "X":
+                break
+            current_sum_eggs += int(matrix[row_bunny][i])
+            current_eggs_position.append([row_bunny, i])
 
-    for present, info in presents.items():
-        if info["magic needed"] == total_magic:
-            found_present = True
-            presents[present]["count"] += 1
+    if current_sum_eggs >= max_eggs:
+        max_eggs = current_sum_eggs
+        max_eggs_positions = current_eggs_position
+        max_direction = direction
 
-    if not found_present:
-        current_material += 15
-        materials.append(current_material)
 
-is_done = False
+size_field = int(input())
+field = []
+directions = deque(["up", "down", "left", "right"])
+max_eggs = -maxsize
+max_eggs_positions = []
+max_direction = []
 
-if (presents["Doll"]["count"] >= 1 and presents["Wooden train"]["count"] >= 1) \
-        or (presents["Teddy bear"]["count"] >= 1 and presents["Bicycle"]["count"] >= 1):
-    is_done = True
+for _ in range(size_field):
+    line = input().split(" ")
+    field.append(line)
 
-if is_done:
-    print("The presents are crafted! Merry Christmas!")
-else:
-    print(f"No presents this Christmas!")
+while directions:
+    current_direction = directions.popleft()
+    counting_eggs(field, current_direction)
 
-if materials:
-    materials.reverse()
-    print(f"Materials left: {', '.join(list(map(str, materials)))}")
+print(max_direction)
 
-if magic_levels:
-    print(f"Magic left: {', '.join(list(map(str, magic_levels)))}")
+for row in max_eggs_positions:
+    print(row)
 
-filtered_presents = [p for p in sorted(presents) if presents[p]["count"] >= 1]
-
-for present in filtered_presents:
-    print(f"{present}: {presents[present]['count']}")
+print(max_eggs)
