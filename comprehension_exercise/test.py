@@ -1,0 +1,2 @@
+*a, = "RealPython"
+print(a)
