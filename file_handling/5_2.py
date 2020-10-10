@@ -1,6 +1,6 @@
 import string
 
-with open('words.txt') as file:
+with open('word.txt') as file:
     words = file.read().split()
 
 words_dict = {word.lower(): 0 for word in words}
@@ -13,6 +13,7 @@ with open('input.txt') as file:
         new_line_list = new_line.split()
         for word in words_dict:
             words_dict[word] += new_line_list.count(word)
+
 
 words_dict = dict(sorted(words_dict.items(), key=lambda x: -x[1]))
 with open('output.txt', 'w') as file:

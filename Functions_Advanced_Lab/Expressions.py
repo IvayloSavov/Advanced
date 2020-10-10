@@ -4,6 +4,7 @@ n = len(numbers)
 permutations = itertools.product("-+", repeat=n)
 
 for permutation in permutations:
-    expr = "".join(itertools.chain(*zip(permutation, numbers)))
+    zipped = zip(permutation, numbers)
+    expr = "".join(itertools.chain(*zipped))
     res = eval(expr)
     print(f"{expr}={res}")

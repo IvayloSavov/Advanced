@@ -1,14 +1,14 @@
 import re
 
-with open("word.txt") as words_fh:
-    words = words_fh.read().split()
-
-with open("input.txt") as input_fh:
-    text = input_fh.read()
-
-# with open("word.txt") as words_fh, open("input.txt") as input_fh:
+# with open("word.txt") as words_fh:
 #     words = words_fh.read().split()
+#
+# with open("input.txt") as input_fh:
 #     text = input_fh.read()
+
+with open("word.txt") as words_fh, open("input.txt") as input_fh:
+    words = words_fh.read().split()
+    text = input_fh.read()
 
 words_occurrences = {}
 
