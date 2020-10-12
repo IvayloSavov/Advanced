@@ -9,5 +9,6 @@ with open("2_text", "r") as file, open("output_fh", "w") as output_fh:
         # print(f"Line {i + 1}: {line[:-2]} ({length})({counter})", file=output_fh)
         result_text += f"Line {i + 1}: {line[:-2]} ({length})({counter})\n"
 
-with open("output", "w") as file:
-    file.write(result_text)
+print(result_text)
+# with open("output", "w") as file:
+#     file.write(result_text)
