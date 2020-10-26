@@ -5,7 +5,7 @@ for i in range(len(numbers_list)):
     number = int(numbers_list[i])
     if number <= 5:
         result *= number
-    elif number > 5:
+    elif number <= 10:
         result /= number
 
 print(result)

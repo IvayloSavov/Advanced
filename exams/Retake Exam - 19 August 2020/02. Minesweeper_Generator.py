@@ -36,3 +36,38 @@ field = [[" " for _ in range(size_field)] for _ in range(size_field)]
 placing_bombs(field, number_bombs)
 counting_bombs_around_pos(field)
 [print(*row) for row in field]
+
+
+# def are_valid_indexes(matrix, row, col):
+#     return row in range(len(matrix)) and col in range(len(matrix))
+#
+#
+# def placing_bombs(matrix, count_b):
+#     while count_b > 0:
+#         row, col = map(int, (input().strip("()").split(", ")))
+#         if are_valid_indexes(matrix, row, col):
+#             matrix[row][col] = "*"
+#             count_b -= 1
+#
+#
+# def counting_bombs_around_pos(row, col, matrix):
+#     pos_count_bombs = 0
+#     for k in range(row - 1, row + 2):
+#         for m in range(col - 1, col + 2):
+#             if are_valid_indexes(matrix, k, m) and matrix[k][m] == "*":
+#                 pos_count_bombs += 1
+#     return pos_count_bombs
+#
+#
+# field_size = int(input())
+# count_bombs = int(input())
+# field = [[0] * field_size for _ in range(field_size)]
+#
+# placing_bombs(field, count_bombs)
+#
+# for i in range(field_size):
+#     for j in range(field_size):
+#         if field[i][j] == 0:
+#             field[i][j] = counting_bombs_around_pos(i, j, field)
+#
+# [print(*row) for row in field]

@@ -26,15 +26,7 @@ def bombs(effects: deque, casings: deque):
         if not is_found_bomb:
             casings[-1] -= 5
 
-        count_bombs = 0
-        for bomb, value in type_bombs.items():
-            if value[1] >= 3:
-                count_bombs += 1
-                continue
-            else:
-                break
-
-        if count_bombs >= 3:
+        if all([value[1] >= 3 for value in type_bombs.values()]):
             success = True
             break
 
@@ -43,22 +35,12 @@ def bombs(effects: deque, casings: deque):
 
 bomb_effects = deque(map(int, input().split(", ")))
 bomb_casings = deque(map(int, input().split(", ")))
-res = bombs(bomb_effects, bomb_casings)
+res, bombs_res = bombs(bomb_effects, bomb_casings)
 
-if res[0]:
-    print("Bene! You have successfully filled the bomb pouch!")
-else:
-    print("You don't have enough materials to fill the bomb pouch.")
+print("Bene! You have successfully filled the bomb pouch!") if res else print("You don't have enough materials to "
+                                                                              "fill the bomb pouch.")
+print(f"Bomb Effects: {', '.join(map(str, bomb_effects)) if bomb_effects else 'empty'}")
+print(f"Bomb Casings: {', '.join(map(str, bomb_casings)) if bomb_casings else 'empty'}")
 
-if bomb_effects:
-    print(f"Bomb Effects: {', '.join(map(str, bomb_effects))}")
-else:
-    print(f"Bomb Effects: empty")
-
-if bomb_casings:
-    print(f"Bomb Casings: {', '.join(map(str, bomb_casings))}")
-else:
-    print("Bomb Casings: empty")
-
-for type_bomb, values in sorted(res[1].items()):
+for type_bomb, values in sorted(bombs_res.items()):
     print(f"{type_bomb}: {values[1]}")

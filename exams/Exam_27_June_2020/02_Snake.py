@@ -5,6 +5,13 @@ def are_valid_indexes(row, col, matrix):
     return 0 <= row < len(matrix) and 0 <= col < len(matrix)
 
 
+def find_snake_boundary(matrix, symbol):
+    for row in range(len(matrix)):
+        for col in range(len(matrix)):
+            if matrix[row][col] == symbol:
+                return row, col
+
+
 def moving_snake(matrix, position_snake):
     food_collected = 0
     game_over = False
@@ -38,22 +45,11 @@ def moving_snake(matrix, position_snake):
             return game_over, food_collected
 
 
-def find_snake_boundary(matrix, symbol):
-    for row in range(len(matrix)):
-        for col in range(len(matrix)):
-            if matrix[row][col] == symbol:
-                return row, col
-
-
 territory_size = int(input())
 territory = [[ch for ch in input()] for _ in range(territory_size)]
 snake_pos = find_snake_boundary(territory, "S")
 res, food_eaten = moving_snake(territory, snake_pos)
 
-if res:
-    print("You won! You fed the snake.")
-else:
-    print("Game over!")
-
+print("You won! You fed the snake.") if res else print("Game over!")
 print(f"Food eaten: {food_eaten}")
 [print(''.join(row)) for row in territory]
